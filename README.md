@@ -1,23 +1,26 @@
-# Mediumish - Jekyll Theme
+# Breva Solutions blog
 
-[Live Demo](https://wowthemesnet.github.io/mediumish-theme-jekyll/) &nbsp; | &nbsp; [Download](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/) &nbsp; | &nbsp; [Buy me a coffee](https://www.wowthemes.net/donate/)
+Built using the [Mediumish theme](https://github.com/wowthemesnet/mediumish-theme-jekyll). 
 
-![mediumish](assets/images/mediumish-jekyll-template.png)
+## Prerequisites
 
+Only need to do these steps once.
 
-### Copyright
+1. **Homebrew** (if not already installed)  
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+1. **rbenv**  
+`brew install rbenv ruby-build`
+1. **Update profile**
+`echo 'eval "$(rbenv init -)"' >> ~/.bash_profile`  
+`source ~/.bash_profile`
+1. **Ruby 2.5.7**  
+`rbenv install 2.5.7`  
+`rbenv global 2.5.7`
+1. **Bundler**  
+`gem install bundler`
 
-Copyright (C) 2019 Sal, https://www.wowthemes.net
+### Local preview and development
 
-**Mediumish for Jekyll** is designed and developed by [Sal](https://www.wowthemes.net) and it is *free* under MIT license. 
-
-<a href="https://www.wowthemes.net/donate/" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-
-### Contribute
-
-1. [Fork the repo](https://github.com/wowthemesnet/mediumish-theme-jekyll).
-2. Clone a copy of your fork on your local
-3. Create a branch off of master and give it a meaningful name (e.g. my-new-mediumish-feature).
-4. Make necessary changes, commit, push and open a pull request on GitHub.
-
-Thank you!
+1. Clone on your local machine
+1. `bundle install`
+1. `bundle exec jekyll serve`

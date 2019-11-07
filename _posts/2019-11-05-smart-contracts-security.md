@@ -5,113 +5,79 @@ author: stelios
 tags: [blockchain, smart contracts, security]
 categories: [Blockchain, Security, Smart contracts]
 featured: true
-description: "Smart contracts promise to complete Africa's leapfrog into Internet 3.0. This post provides an analysis to navigate the security aspects of deploying smart contracts for mission-critical processes."
+description: "Smart contracts promise to complete Africa's leapfrog into Internet 3.0. An analysis to navigate the security aspects of deploying smart contracts for mission-critical processes."
 image: assets/images/smart-contracts/chris-ried-ieic5Tq8YMk-unsplash.jpg
 ---
 
-Smart contracts are revolutionizing whole industries
-and promise optimize and automate decades of inefficient processes
+Smart contracts are revolutionizing whole industries and promise to optimize and automate decades-old inefficient processes.  
+Africa has already [leapfrogged][1] ahead of the rest of the world into the mobile-first technological era.  
+Smart contracts can enable another leapfrog into the [Internet of Agreements][2] era. 
 
-Africa has already [leapfrogged][1] ahead of the rest of the world
-into the mobile-first technological era
+Like with any brave new world, there are some serious caveats and security implications. 
+Decision makers must take them into account before making an informed decision. 
 
-Smart contracts can enable another leapfrog into the [Internet of Agreements][2] era
-
-Like with any brave new world,
-there are some very serious caveats and security implications
-that decision makers have to take into account
-
-This post
-goes beyond the marketing hype
-to highlight some key concepts that everyone should be familiar with
-
+This post goes beyond the marketing hype to highlight some key concepts that everyone considering this technology 
+should be familiar with. 
 
 # Let's look around us
 
 ![A small world](../assets/images/smart-contracts/blur-cartography-close-up-concept-408503.jpg)
 > Photo by slon_dot_pics from Pexels
 
-The world around us works because of contracts
-because of agreements
+The world around us works because of contracts, because of agreements. 
 
-You are reading this blog post on your phone or computer
-because you purchased the device
-I.e. there was an agreement between you and the shop owner
-which was fulfilled once money and device changed hands
+You are reading this blog post on your phone or computer because you purchased the device. 
+In other words, there was an agreement between you and the device seller, which was fulfilled once money and device 
+changed hands. 
 
-The device arrived in the shop owner's hands
-b/c a cargo ship full of these devices docked at some port
-The device making its way from the factory to the shop
-meant that tens if not hundreds of contracts and agreements had to be drafgted, verified and honoured:
-the factory to the wholesaler,
-the factory to the shipping agent,
-the shipping agent to the shipping company,
-the shipping company to XYZ
+The device making its way from the factory to the shop meant that tens if not hundreds of contracts and agreements had 
+to be drafted, agreed, verified and honoured:  
+* the factory to the wholesaler,
+* the wholesaler to the shipping agent,
+* the shipping agent to the shipping company, etc
 
-The device is powered by electricity b/c you have a contract with the power company: pay on time, receive electricity.
+The device is powered by electricity, because you have a contract with the power company: pay on time, in exchange for 
+electricity.  
+You get where this is going!  
+Almost every interaction around us happens, has happened and will continue to happen, because there is an agreement, 
+a contract, between two or more parties.  
+Written or unwritten, it is recognized and is honoured, because it is ultimately enforceable by a "power that be" (state, 
+courts,...)
 
-The house you live in
-you know it is yours b/c you acquired the land based on... well, you get where this is going!
+The majority of these transactions, especially the ones with a small monetary value, happen seamlessly, without us 
+even noticing.  
+On the contrary, the higher the value of a transaction the more friction is involved in completing it.  
 
-Almost every interaction around us happens, have happened and will continue to happen
-b/c there is an agreement, a contract, between two or more parties
-written or unwritten
-recognized by both
-and enforceable by a "power that be" (state, police, courts,...)
-
-The majority of these transactions
-especially the ones with a small monetary value
-happen without a problem possibly without us noticing
-
-The higher the value involved in a transaction the more friction is involved
-in completing it
-For example purchasing real estate
-clearing of shipping
-almost any type of insurance
-
-There is a large amount of paperwork to be filled in
-and checks to be completed
-To secure the interests of the parties involved
-as well as comply with legal requirements
-
-For example, in a real estate purchase
-a contract is drafted describing the building/land in detail
-sometimes this needs to be drafted by a notary who acts as a trusted third party
-both parties sign
-then the signed contract needs to be submitted to the relevant authority (e.g. land registry)
-to transfer the title
-Upon confirmation of the transfer of the title (in one direction) and the agreed monetary value (in the other direction)
-is the transaction complete.
+For example, in a real estate purchase a contract is drafted describing the building/land in detail.  
+In most jurisdictions this is drafted by a notary or lawyer (a trusted third party).  
+Both parties sign, the signed contract is submitted to the relevant authority (e.g. land registry), the monetary value 
+is transferred in the opposite direction, etc
+All these checks and balances are introduced to secure the interests of the parties involved, as well as comply with 
+legal requirements.
 
 # How about some automation?
 
 ![Computer](../assets/images/smart-contracts/johannes-plenio-FZpCcPss9to-unsplash.jpg)
 > Photo by Johannes Plenio on Unsplash
 
-Something seemingly so simple as a title of ownership transfer
-involves different trusted third parties, authorities and "process gates"
-to minimise the possibility of mistakes or fraud
+Something seemingly so simple as a title of ownership transfer, involves different trusted third parties, authorities 
+and "process gates" to minimise the possibility of mistakes or fraud.  
+In the enterprise domain, e.g. shipping and logistics, the contracts and process gates that need to be fulfilled are 
+[even more complex][4] involving multiple parties and authorities. 
 
-In the enterprise domain
-e.g. shipping and logistics
-the contracts and process gates that need to be fulfilled
-are [even more complex][4] involving multiple parties and authorities
+One answer to this complexity is the introduction of automation.  
+Paper- and rule-based processes have been digitized for many years now. Steps are automated and friction is constantly 
+reduced for even the most complex transactional processes. 
 
-One answer to this complexity is the introduction of automation
-Paper- and rule-based processes
-have been digitized for many years now
-automating steps and constantly removing friction from even the most complex transactional processes
+One great example of simplification made possible by digitization is [parametric insurance][9].  
+In this case, all manual processing (claims form, assessment, payout) has been replaced with 1-2 simple and automatic 
+rules (e.g. "pay the farmer her insurance if monthly rain is more than 100mm").
 
-One great example of simplification made possible by digitization
-is [parametric insurance][9]
-where all manual processing
-
-However digitization of contracts in IT systems
-introduces a critical weak point: centralization in one or a few data centers
-This makes critical transactional processes vulnerable to cyber attacks
-This was demonstrated in a spectacular way in 2017 with the [NotPetya malware][3]
-crippling the international shipping company [Maersk][5]
- along with almost the [entire infrastructure of Ukraine][6]
+However, digitization of contracts in IT systems introduces a critical weak point: centralization in a few data centers.  
+This makes critical transactional processes vulnerable to physical (power cuts) and cyber attacks. This was 
+demonstrated in a spectacular way in 2017 with the [NotPetya malware][3].  
+This single virus crippled the multi-national shipping company [Maersk][5] along with almost the [entire public 
+infrastructure of Ukraine][6]. 
 
 # A new paradigm
 
@@ -131,8 +97,8 @@ Public blockchains allow any computer to connect and become part of them
 Private blockchains allow only a preselected set
 
 <div
-    style="width: 480px; height: 360px; margin: 10px; position: relative;">
-    <iframe allowfullscreen frameborder="0" style="width:480px; height:360px"
+    style="width: 640px; height: 480px; margin: 10px; position: relative;">
+    <iframe allowfullscreen frameborder="0" style="width:640px; height:480px"
         src="https://www.lucidchart.com/documents/embeddedchart/b29b2c36-bc5a-4af7-89f5-651da8d74ca1"
         id="lRl62L5eteGn">
     </iframe>
@@ -169,8 +135,8 @@ A smart contract is a piece of code which
 * is executed by **all** of the nodes of the network
 
 <div
-    style="width: 480px; height: 360px; margin: 10px; position: relative;">
-    <iframe allowfullscreen frameborder="0" style="width:480px; height:360px"
+    style="width: 640px; height: 480px; margin: 10px; position: relative;">
+    <iframe allowfullscreen frameborder="0" style="width:640px; height:480px"
         src="https://www.lucidchart.com/documents/embeddedchart/d65697d0-4df3-4fb5-8de0-5f71f6c8e3ba" id="L9l6W1HWTkXY">
     </iframe>
 </div>
@@ -251,6 +217,9 @@ oracle security issues
 * Legal framework
 
 # Parting thought
+
+![Lift off](../assets/images/smart-contracts/flight-sky-earth-space-2166.jpg)
+> Photo from Pexels
 
 Like space travel
 opens vast new horizons

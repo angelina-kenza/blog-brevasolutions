@@ -2,9 +2,9 @@
 name: "Breva Solutions"
 title: "Breva Solutions - Blog"
 description: "Our perspectives on Africa, business, cyber-security and everything in between."
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
-baseurl: /mediumish-theme-jekyll
+logo: 'assets/icon/favicon-96x96.png'
+favicon: 'assets/icon/favicon-96x96.png'
+baseurl:
 google_analytics: # 'UA-46278016-1'
 disqus: # 'demowebsite'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
