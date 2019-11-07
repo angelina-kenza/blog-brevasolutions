@@ -1,7 +1,7 @@
 # Site
 name: "Breva Solutions"
 title: "Breva Solutions - Blog"
-description: "Our perspectives on Africa, business cyber-security and everything in between."
+description: "Our perspectives on Africa, business, cyber-security and everything in between."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: /mediumish-theme-jekyll
@@ -16,7 +16,7 @@ authors:
   stelios:
     name: Stelios Gerogiannakis
     display_name: Stelios
-    avatar: 'assets/images/stelios.jpeg'
+    avatar: 'assets/images/stelios.jpg'
     # gravatar: e56154546cf4be74e393c62d1ae9f9d4
     email: stelios.g@brevasolutions.com
     web: https://sgerogia.github.io
@@ -25,7 +25,7 @@ authors:
   angela:
     name: Angela Nzeyi
     display_name: Angela
-    avatar: 'assets/images/angela.jpeg'
+    avatar: 'assets/images/angela.jpg'
     # gravatar: b1cc14991db7a456fcd761680bbc8f81
     email: angelak@brevasolutions.com
     web: # https://www.wowthemes.net
