@@ -84,17 +84,16 @@ infrastructure of Ukraine][6].
 ![Blockchain](../assets/images/smart-contracts/launchpresso-h5iazR-wljU-unsplash.jpg)
 > Photo by Launchpresso on Unsplash
 
-Smart contracts are a new way to address the problem of digitization
-without any central points of failure, built on top of blockchain.
+Smart contracts are a new way to address the problem of digitization.  
+Built on top of blockchain, they offer automation, without any central points of failure.
 
-Let's unpack this "heavy" definition into more understandable concepts
+Let's unpack this "heavy" definition into more understandable concepts. 
 
 ## Blockchain
 
-At its core a blockchain is a distributed data storage
-And by distributed we mean from a few computers in a data center to many thousands across the globe
-Public blockchains allow any computer to connect and become part of them
-Private blockchains allow only a preselected set
+At its core a blockchain is a distributed data storage.  
+"Distributed" means from a few computers in a data center to many thousands across the globe. Public blockchains allow 
+any computer to connect and become part of them. Private blockchains allow only a preselected set of servers. 
 
 <div
     style="width: 640px; height: 480px; margin: 10px; position: relative;">
@@ -104,32 +103,29 @@ Private blockchains allow only a preselected set
     </iframe>
 </div>
 
-This diagram shows
-how a disparate collection of servers
-* form a robust network through [peer-to-peer networking][12]
-* can confirm and validate transactions originating from users.
-These transactions belong to (and originate from) users because they are signed with the users' cryptographic keys
+This diagram shows how a collection of servers/computers can
+* form a robust network through [peer-to-peer networking][12], and
+* confirm and validate transactions originating from users.  
+These transactions belong to (and originate from) users, because they are signed with the users' cryptographic keys.
 
-Through cryptography and game theory incentives blockchain nodes
-which do not necessarily trust each
-reach a consensus on what the true state of the world is
+The nodes participating in the blockchain network, reach a consensus on what the true state of the world is at any given 
+moment. This happens without necessarily trusting each other.  
+This is a remarkable feature and is achieved through cryptography and game theory incentives.
 
 For a deeper technical analysis this [article][10] and this [article][11] are good starting points.
 
-The important takeaway for our discussion is that at its core
-**a blockchain is a distributed trust machine**
-A way for any 2 people or systems on the planet to agree on the truth
-without an intermediary
+The important takeaway for our discussion is that **a blockchain is a distributed trust machine**.  
+A way for any 2 people or systems on the planet to agree on the truth without an intermediary. 
 
-Law, contracts and agreements are underpinning trust in the real world.
-Blockchain is now offering this underlying fabric for the digital world
+Social norms, law and institutions underpin trust in the real world.  
+Blockchain is now offering this underlying fabric for the digital world.
 
-## Smart contracts
+## The next step
 
-The obvious question then is: how do we fully utilize this trust machine to replicate real world processes?
+The obvious question then is: how do we fully utilize this trust machine to replicate real world processes?  
 The answer is smart contracts.
 
-A smart contract is a piece of code which
+A smart contract is a piece of code which  
 * belongs to (and is deployed by) a user on the blockchain network,
 * can be called by (and can call) other smart contracts, and
 * is executed by **all** of the nodes of the network
@@ -141,11 +137,17 @@ A smart contract is a piece of code which
     </iframe>
 </div>
 
-This is an even more powerful concept
-Blockchain provides the foundation for random participants to agree on the state of the world (e.g. `A belongs to X`)
+Smart contracts are an even more powerful concept.  
+Blockchain provides the foundation for random participants to agree on the state of the world (e.g. `A belongs to X`).  
 Smart contracts provide the mechanism for anyone to verify **how and when** the state of the world changes (`if W happens, then
-A belongs to Y`)
-Immutably and at scale
+A belongs to Y`).  
+These changes and state transitions happen  
+* **Immutably**  
+Once recorded they cannot change. 
+* **At scale**  
+Thousands of smart contracts for all kinds of processes can be processing millions of requests.
+
+Again, for a deeper dive this [article][13] and this [article][14] will provide a good context.
 
 # Security concerns
 
@@ -240,3 +242,5 @@ once rocket takes off, one wants all systems to function perfectly
   [10]: https://blockchainhub.net/blockchain-intro/
   [11]: https://bitsonblocks.net/2015/09/09/gentle-introduction-blockchain-technology/
   [12]: https://en.wikipedia.org/wiki/Peer-to-peer
+  [13]: https://hackernoon.com/everything-you-need-to-know-about-smart-contracts-a-beginners-guide-c13cc138378a
+  [14]: https://blockgeeks.com/guides/smart-contracts/
