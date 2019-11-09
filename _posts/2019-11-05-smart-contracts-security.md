@@ -212,16 +212,30 @@ body. In this case, a private blockchain deployment might be the only option.
 ![Keys, keys, keys!](../assets/images/smart-contracts/antique-close-up-equipment-hanging-615350.jpg)
 > Photo by Skitterphoto from Pexels
 
-Blockchains are based on cryptography 
-As we mentioned 
-users 
-blockchain transactions and smart contract happen 
+Blockchains are based on cryptography  
+users identify themselves using their private encryption keys 
+keys cannot be just stored in a server
+if keys are copied or stolen then the attacker is able to impersonate the user
+in a similar vein if keys are lost or destroyed then this is an irrepairable loss
+the user can no longer prove they are who they claim they are
+ 
+in an enterprise setting 
+it is imperative that there is a proper [Key Management System][22] in place
+the most appropriate is a [Hardware Security Module][23] 
+which offers full proptection against key theft, loss or tampering
+while still allowing interaction with the blockchain and the smart contracts at a high volume
 
 ## Contract logic
 
 ![Re-arranging](../assets/images/smart-contracts/toys-letters-pay-play-48898.jpg)
 > Photo by Pixabay from Pexels
 
+In the real world the law is the law
+And if something is unclear then the judiciary is in charge of interpreting and amending 
+In the world of smart contracts the code is the law
+a smart contract's actions are final and irrevocable 
+reversing them is impossible 
+the best example of this was    
 
 ## Future-proofing
 
@@ -313,3 +327,5 @@ once rocket takes off, one wants all systems to function perfectly
   [19]: https://www.netmotionsoftware.com/blog/mobility/mission-critical-systems
   [20]: https://en.wikipedia.org/wiki/Black_swan_theory
   [21]: https://www.corda.net/
+  [22]: https://en.wikipedia.org/wiki/Key_management
+  [23]: https://en.wikipedia.org/wiki/Hardware_security_module
