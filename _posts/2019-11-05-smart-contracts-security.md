@@ -183,17 +183,17 @@ higher performance.
 A smart contract needs to store data, expose callable methods and (in the case of Ethereum) emit events, if it is going 
 to be of any use. In a public platform other participants can eavesdrop; not necessarily access the data, but have a 
 good feel of traffic/load based on transactions/events on the blockchain.  
-Is this something acceptable? If yes, then a public blockchain is fine.  
-If not, the whole system should be ring-fenced in a private network, possibly implemented in a dedicated blockchain 
-like [Corda][21] as an additional security measure.  
+Is this something acceptable?  
+If yes, then a public blockchain is fine.  If not, the whole system should be ring-fenced in a private network.     
+Are the data and actions available to everyone on the network or is access permissioned?    
+If permissions are needed, then an enterprise-oriented blockchain like [Corda][21] would be more suitable.  
 
 * **System criticality**  
 How critical is the smart contract system?   
 For example, a smart contract and blockchain holding all the land titles of the country is a completely different beast 
 to, say, an automatic parking ticketing system.  
 Losing the former and you have riots in the streets (almost [mission-critical][19] for a country). Lose the latter and 
-people are happy :-)
-
+people are happy :-)  
 Critical systems **must** be deployed with [black swan events][20] in mind. Wars, earthquakes, tsunamis, country-wide 
 power cuts,...; catastrophic events **will** happen.  
 Is the blockchain supported by enough servers around the country (private) or the world (private/public) to survive
@@ -203,106 +203,153 @@ and continue functioning?
 Each action which modifies a public blockchain comes with a cost attached; these are the fees for the computers securing 
 the network.  
 Deploying a smart contract on a public network, means being ready to fund the cost of it, by buying tokens (ETH, XTZ,...)
-in the public market.  
-Given the historical volatility of cryptocurrency prices, this might not be acceptable for an enterprise or government 
-body. In this case, a private blockchain deployment might be the only option. 
+in the public market. Given the historical volatility of cryptocurrency prices, this might not be acceptable for an enterprise or government 
+body.  
+In this case, a private blockchain system might be the only option. 
 
 ## Private keys
 
 ![Keys, keys, keys!](../assets/images/smart-contracts/antique-close-up-equipment-hanging-615350.jpg)
 > Photo by Skitterphoto from Pexels
 
-Blockchains are based on cryptography  
-users identify themselves using their private encryption keys 
-keys cannot be just stored in a server
-if keys are copied or stolen then the attacker is able to impersonate the user
-in a similar vein if keys are lost or destroyed then this is an irrepairable loss
-the user can no longer prove they are who they claim they are
- 
-in an enterprise setting 
-it is imperative that there is a proper [Key Management System][22] in place
-the most appropriate is a [Hardware Security Module][23] 
-which offers full proptection against key theft, loss or tampering
-while still allowing interaction with the blockchain and the smart contracts at a high volume
+We already mentioned that blockchains are based on cryptography. In layman's terms, users and systems identify 
+themselves to (and interact with) the blockchain using their private encryption keys.   
+These software keys cannot be just stored in a server or a hard drive.  
+If they are copied or stolen, the attacker will be able to impersonate the user with impunity. In a similar vein, if keys 
+are lost or destroyed, it is an irreparable loss. The user can no longer interact with the blockchain; the private 
+encryption keys are truly "the keys to the kingdom". 
+
+In an enterprise or government setting, it is imperative that there is a proper [Key Management System][22] in place.  
+The most appropriate solution is a [Hardware Security Module][23].  
+This offers full protection against key theft, loss or tampering. At the same time, it allows secure interaction with the 
+blockchain and the smart contracts at a high volume.
 
 ## Contract logic
 
 ![Re-arranging](../assets/images/smart-contracts/toys-letters-pay-play-48898.jpg)
 > Photo by Pixabay from Pexels
 
-In the real world the law is the law
-And if something is unclear then the judiciary is in charge of interpreting and amending 
-In the world of smart contracts the code is the law
-a smart contract's actions are final and irrevocable 
-reversing them is impossible 
-the best example of this was    
+In the real world the law is the law, setting the rules and boundaries.   
+If something is unclear, then the judiciary is in charge of interpreting and amending. Even in the extreme case that 
+society "changes its mind" on something, in many jurisdictions past actions and agreements can be reversed with 
+[ex post facto laws][25].  
+
+In the world of smart contracts "[the code is the law is the law][26]".  
+This means that, since a blockchain captures the agreed-upon true state of things, by consequence a smart contract's 
+actions are final and irrevocable.   
+Reversing a smart contract is impossible without invalidating the integrity of the entire blockchain.  
+
+The most well-known example of this was one of the most publicized smart contract systems created, the [DAO][24].  
+In June 2016, some Ethereum blockchain users took advantage of a weak point in the DAO's code and siphoned off the 
+equivalent of millions in US dollars from the DAO contract's account.  
+Notice that we did **not** use the word "steal"!  
+Since in the new world code is law, could it be that the weakness was intentional? I.e. the real-world equivalent of a 
+"legal loophole". If the intention was for weaknesses to not be allowed, why was it not cemented in the DAO's code?
+      
+This discussion can only highlight that a smart contract's code might be as important (if not more) than the code 
+running in a nuclear reactor. It has to be checked and tested and verified 1000 times over for any possible and 
+impossible situation. Once deployed, it is "law". 
 
 ## Future-proofing
 
 ![Law](../assets/images/smart-contracts/j-zamora-GWOTvo3qq7U-unsplash.jpg)
 > Photo by j zamora on Unsplash
 
+Having said that "code is law" does not mean that either code or law remains static.  
+The world around us moves. The agreements of today do not use the same terms as they did 10 years go, nor will they be 
+the same 10 years from now. 
+The last thing an organisation wants is to deploy a smart contract, only to discover a few months later that it cannot 
+upgrade it without major disruption. 
+
+Not architecting the smart contracts the right way to make them easy to upgrade will inevitably result in expensive and 
+unplanned retrofitting.   
+For example, it is realistic to assume that a land registry smart contract will soon end up being used by a large number of 
+different systems and applications across the country. In most platforms, simply deploying a new smart contract to add 
+some new features will result in the contract's address changing. This means that all the downstream systems which depend 
+on it will need to be updated to use the new contract.   
+Depending on the nature and number of these systems, this may be prohibitively complex and expensive. 
+
+This problem calls for a deeply technical solution and is different depending on the chosen smart contract platform.   
+It requires deep knowledge of the features and restrictions of it.  
+For reference, some options (each one with its own pros and cons) are  
+* the [proxy contract][30] pattern ([widely][27] [supported][32])
+* lazily [migrating data][28]
+* separating [data from logic][31]
+* using [libraries][29] (if supported) 
 
 ## Oracles
 
 ![Ancient Greece](../assets/images/smart-contracts/low-angle-photograph-of-the-parthenon-during-daytime-164336.jpg)
 > Photo by Pixabay from Pexels
 
-In the world of smart contracts the term *oracle*
-identifies any trusted source of information  and events from the external world
+In the world of smart contracts the term **oracle** identifies any trusted source of information and events from the 
+external world.  
+In ancient Greece oracles were believed to be the [undisputable voice of the gods][7]. A [golden source][8] of 
+information from the "world beyond".
 
-In ancient Greece oracles were believed to be the [undisputable voice of the gods][7]
-a ["golden source"][8] of information from the "world beyond"
+Remember from the introduction that smart contracts execute in a secure, isolated environment.  
+They can be called by users (using their private keys) as well as other smart contracts. 
+For their logic to be useful to the real world, smart contracts need to react to real-world events and consume real-world 
+information.  
+For example:  
+> "Is the ship docked in port?"  
+> "Has $100 landed in bank account Y?"  
+> "What product model does serial number XYZ correspond to?"
 
-Remember from the introduction that smart contracts
-execute in a secure, isolated environment
-they can be called by users (who identify themselves via their private keys)
-as well as other smart contracts
+These external stimuli result in the smart contract taking some action and recording a side-effect in the blockchain 
+for ever.  
+However, the finality of all smart contract actions raises an important question:  
+How trust-worthy is the oracle?  
+What if it gives the wrong information the moment the contract requests it?
 
-for their logic to be useful to the real world
-smart contracts need to react to real-world events
-and get real-world information
+For example, a property purchase smart contract may depend on a banking oracle to confirm that the [fiat money][33] funds 
+have landed in the bank account. What if (by accident or malicious action) the banking oracle incorrectly reports that 
+the money is there, when it is not?  
+The contract will be triggered and the property title will be irrevocably transferred, when in fact it should not.
 
-For example
-"is the ship docked in port?"
-"has $X dollars landed in bank account Y?"
-"what product model does serial number XYZ correspond to?"
+Depending on the situation and the domain, there are various strategies to address oracle security issues.
 
-This external stimuli results in the smart contract taking some action
-and recording a side-effect in the blockchain for ever
+* **Own oracle**  
+The simplest way to address the issue of oracle security is by implementing the oracle ourselves.  
+This way the enterprise does not have to trust any third party for the smart contract information. However, in many cases,
+this may be easier said than done. It is one thing to write the code for a weather oracle. It is quite another to 
+actually install and weather stations around the world to feed it with data.   
 
-However the finality of all smart contract actions
-raises an important question
-How trust-worthy is the oracle?
-What if it gives the wrong information the moment I request it?
+* **Consensus-based decision**  
+Another way of mitigating the risk of a compromised oracle is to reach out to more than one.  
+For example, reach out to 3 weather providers to get the current temperature. We can then either consider the average or
+only the value provided by the majority or oracles.  
+In this case a hacker would have to concurrently attack the majority of our oracles to affect the outcome of the smart
+contract.  
 
-For example a property purchase smart contract depends on a banking oracle
-to confirm that the funds have landed in the account
-What if (by accident or malicious action) the banking oracle incorrectly reports that the money is there
-when in fact it is not?
-The contract will be triggered and the property title will be irrevocably transferred
-when the money was not.
+* **"Cooling off" period**  
+Another way to address a compromised oracle would be to check again after a few minutes/hours/days. If the value is 
+the same in both calls, then the transaction can be completed.  
+If the business domain logic allows it, this approach adds an additional hurdle for an attacker: not only to take control 
+of an oracle but also keep it for a prolonged period of time without being discovered.  
 
-Depending on the situation and the domain there are various strategies to address
-oracle security issues
-
-* Owned oracle
-
-* Consensus-based decision
-
-* Cooling off period
-
-* Legal framework
+* **Indemnity covenant**  
+In the case of a paid-for oracle (i.e. the smart contract owners pay the oracle to supply information), adding an 
+indemnity covenant is a must.  
+With it the oracle provider is solely responsible for the correct function of the oracle. If a material loss arises because of 
+incorrect data, then it would be up to the oracle provider to indemnify.  
+The question then is: *how do we prove in the future that the oracle returned a given value?*  
+For web-based oracles (i.e. web sites, APIs,...) the answer already exists in the form of TLS notaries.  
+Using the [properties of the TLS security protocol][34], the smart contract can generate a non-repudiating signature 
+of the value returned by the oracle.  
+In simple words, this is the equivalent of asking someone to take their own photo with their own camera and we keep it 
+as future proof.  
 
 # Parting thought
 
 ![Lift off](../assets/images/smart-contracts/flight-sky-earth-space-2166.jpg)
 > Photo by Pixabay from Pexels
 
-Like space travel
-opens vast new horizons
-but take extreme preparation and diligence
-once rocket takes off, one wants all systems to function perfectly
+Blockchain and smart contracts have the potential to revolutionize everyday life and interactions in a similar way that 
+internet and the smartphone did.  
+There are however some important considerations and security concerns to address.  
+Designing, coding, deploying and maintaining a smart contract system requires skill, extreme preparation and diligence.  
+Once the rocket takes off, you want all systems to function perfectly.
 
 
 
@@ -329,3 +376,14 @@ once rocket takes off, one wants all systems to function perfectly
   [21]: https://www.corda.net/
   [22]: https://en.wikipedia.org/wiki/Key_management
   [23]: https://en.wikipedia.org/wiki/Hardware_security_module
+  [24]: https://en.wikipedia.org/wiki/The_DAO_(organization)
+  [25]: https://en.wikipedia.org/wiki/Ex_post_facto_law
+  [26]: https://journals.openedition.org/factsreports/4518
+  [27]: https://medium.com/the-cryptonomic-aperiodical/building-up-blockchains-tezos-proxy-contract-616b55dfdca8
+  [28]: https://medium.com/bitclave/the-easy-way-to-upgrade-smart-contracts-ba30ba012784
+  [29]: https://hackernoon.com/how-to-write-upgradable-versioned-smart-contracts-in-solidity-910007057943
+  [30]: https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2
+  [31]: https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/
+  [32]: https://github.com/EOSIO/Documentation/blob/master/TechnicalWhitePaper.md#easy-upgrades-and-bug-recovery
+  [33]: https://en.wikipedia.org/wiki/Fiat_money
+  [34]: https://tlsnotary.org/
