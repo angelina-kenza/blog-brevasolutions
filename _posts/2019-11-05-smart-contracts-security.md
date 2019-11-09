@@ -16,7 +16,7 @@ Smart contracts can enable another leapfrog into the [Internet of Agreements][2]
 Like with any brave new world, there are some serious caveats and security implications. 
 Decision makers must take them into account before making an informed decision. 
 
-This post goes beyond the marketing hype to highlight some key concepts that everyone considering this technology 
+This post attempts to go beyond the marketing hype to highlight some key concepts that everyone considering this technology 
 should be familiar with. 
 
 # Let's look around us
@@ -149,28 +149,90 @@ Thousands of smart contracts for all kinds of processes can be processing millio
 
 Again, for a deeper dive this [article][13] and this [article][14] will provide a good context.
 
-# Security concerns
+# Security and scalability
 
+Smart contracts solve a number of problems in an elegant way.  
+However they do not solve *all* problems. As with any technology, there are some important considerations and trade-offs 
+to consider. 
 
-## Public vs private infrastructure
+## Which platform and where
 
 ![Private area](../assets/images/smart-contracts/business-dirty-door-security-241028.jpg)
 > Photo by Nguyen Nguyen from Pexels
+
+Most smart contract networks ([Ethereum][15], [Tezos][16], [EOS][17],...) have been designed to scale on a global level.  
+Any computer is incentivised to join their public network and, effectively, increase the network's strength against malicious attacks. 
+
+From a smart contract creator's point of view, this sounds intriguing: deploying on a global platform which never shuts 
+down and is resistant to attacks.
+On the other hand, the default decision of an enterprise or government body is probably to deploy everything on its own
+data centers for security reasons. After all, you can't trust the Internet, can you?
+
+There some important implications, which make this decision a little bit more involved.
+
+* **Volumes**  
+How many transactions should the smart contract process? How quickly?  
+A few a day, completed within a couple of hours? Or millions a day, completed within seconds?  
+Deploying on a public network means your contract is competing for network resources with others.  
+One should seriously consider the current [performance guarantees][18] of a public blockchain platform versus 
+deploying smart contracts in private, dedicated data centers.  
+In the latter case, there are no third-party contracts allowed, which means no competition for resources, which means 
+higher performance.   
+    
+* **Privacy of data**  
+A smart contract needs to store data, expose callable methods and (in the case of Ethereum) emit events, if it is going 
+to be of any use. In a public platform other participants can eavesdrop; not necessarily access the data, but have a 
+good feel of traffic/load based on transactions/events on the blockchain.  
+Is this something acceptable? If yes, then a public blockchain is fine.  
+If not, the whole system should be ring-fenced in a private network, possibly implemented in a dedicated blockchain 
+like [Corda][21] as an additional security measure.  
+
+* **System criticality**  
+How critical is the smart contract system?   
+For example, a smart contract and blockchain holding all the land titles of the country is a completely different beast 
+to, say, an automatic parking ticketing system.  
+Losing the former and you have riots in the streets (almost [mission-critical][19] for a country). Lose the latter and 
+people are happy :-)
+
+Critical systems **must** be deployed with [black swan events][20] in mind. Wars, earthquakes, tsunamis, country-wide 
+power cuts,...; catastrophic events **will** happen.  
+Is the blockchain supported by enough servers around the country (private) or the world (private/public) to survive
+and continue functioning?
+
+* **Cost of public tokens**  
+Each action which modifies a public blockchain comes with a cost attached; these are the fees for the computers securing 
+the network.  
+Deploying a smart contract on a public network, means being ready to fund the cost of it, by buying tokens (ETH, XTZ,...)
+in the public market.  
+Given the historical volatility of cryptocurrency prices, this might not be acceptable for an enterprise or government 
+body. In this case, a private blockchain deployment might be the only option. 
 
 ## Private keys
 
 ![Keys, keys, keys!](../assets/images/smart-contracts/antique-close-up-equipment-hanging-615350.jpg)
 > Photo by Skitterphoto from Pexels
 
+Blockchains are based on cryptography 
+As we mentioned 
+users 
+blockchain transactions and smart contract happen 
 
 ## Contract logic
 
+![Re-arranging](../assets/images/smart-contracts/toys-letters-pay-play-48898.jpg)
+> Photo by Pixabay from Pexels
 
 
 ## Future-proofing
 
+![Law](../assets/images/smart-contracts/j-zamora-GWOTvo3qq7U-unsplash.jpg)
+> Photo by j zamora on Unsplash
+
 
 ## Oracles
+
+![Ancient Greece](../assets/images/smart-contracts/low-angle-photograph-of-the-parthenon-during-daytime-164336.jpg)
+> Photo by Pixabay from Pexels
 
 In the world of smart contracts the term *oracle*
 identifies any trusted source of information  and events from the external world
@@ -221,7 +283,7 @@ oracle security issues
 # Parting thought
 
 ![Lift off](../assets/images/smart-contracts/flight-sky-earth-space-2166.jpg)
-> Photo from Pexels
+> Photo by Pixabay from Pexels
 
 Like space travel
 opens vast new horizons
@@ -244,3 +306,10 @@ once rocket takes off, one wants all systems to function perfectly
   [12]: https://en.wikipedia.org/wiki/Peer-to-peer
   [13]: https://hackernoon.com/everything-you-need-to-know-about-smart-contracts-a-beginners-guide-c13cc138378a
   [14]: https://blockgeeks.com/guides/smart-contracts/
+  [15]: https://www.ethereum.org/
+  [16]: https://tezos.com/
+  [17]: https://eos.io/
+  [18]: https://medium.com/blockchannel/the-case-for-ethereum-scalability-a66ed08d0bed
+  [19]: https://www.netmotionsoftware.com/blog/mobility/mission-critical-systems
+  [20]: https://en.wikipedia.org/wiki/Black_swan_theory
+  [21]: https://www.corda.net/
