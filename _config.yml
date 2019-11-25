@@ -21,7 +21,7 @@ authors:
     email: stelios.g@brevasolutions.com
     web: https://sgerogia.github.io
     twitter: # https://twitter.com/wowthemesnet
-    description: "Technical advisor in Breva Solutions. Background in fintec, life-long learner, happy father."
+    description: "Technical advisor in Breva Solutions. Background in Fintec, life-long learner, happy father."
   angela:
     name: Angela Nzeyi
     display_name: Angela
@@ -31,6 +31,15 @@ authors:
     web: # https://www.wowthemes.net
     twitter: # https://twitter.com/wowthemesnet
     description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
+  richard:
+    name: Richard Mutabazi
+    display_name: Richard
+    avatar: 'assets/images/richard.jpg'
+    # gravatar: b1cc14991db7a456fcd761680bbc8f81
+    email: angelak@brevasolutions.com
+    web: # https://www.wowthemes.net
+    twitter: # https://twitter.com/wowthemesnet
+    description: "Richard Mutabazi is the co-founder of Breva Solutions and Head of Business Development in East Africa. Previously he worked at the UK Ministry of Justice and the London Assembly. He holds a BA in Politics and Int. Relations (Univ. of Westminster) and a MA in War Studies (King’s College London)."
 
 # Plugins
 plugins:
