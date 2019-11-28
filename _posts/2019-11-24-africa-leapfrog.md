@@ -10,7 +10,8 @@ image: assets/images/africa-leapfrog/sutirta-budiman.jpg
 ---
 
 Go to any mobile money agent anywhere in Africa and you will probably find a large book under the table used for bookkeeping.  
-A small investment of a few dollars $150 for a rechargeable tablet would allow this business to save time and greatly increase productivity. 
+A small investment of a few dollars for a rechargeable tablet would allow this business to save time and greatly increase productivity. 
+
 This post discusses some common themes across African states and businesses so that they stay competitive in the global landscape.  
 
 # A diverse continent
@@ -50,8 +51,7 @@ real industrial costs are [higher than comparable countries][13] elsewhere in th
 
 Infrastructure matters. Infrastructure ownership matters even more.  
 Most of Africa’s connections to the rest of the world is externally provided, for example [internet fibre cables][14] 
-and [satellite][15]. It is quite telling that M-Pesa was originally developed by [Vodafone][16] and that African 
-infrastructure players can be counted [on one hand][17].   
+and [satellite][15]. It is quite telling that pan-African (or globally African) infrastructure players can be counted [on one hand][17].   
 Foreign direct investment in Africa traditionally favours [extractive assets][18] with high RoI, producing some income 
 for the host country. However, across the continent there is a distinct lack of [infrastructure][19] which may not offer 
 immediate yield but acts as a multiplier for economic activity (e.g. street lighting, electricity grid, paved roads,...). 
@@ -131,7 +131,7 @@ whilst asleep.
   [14]: http://www.satsig.net/ivsat-africa.htm
   [15]: http://www.satsig.net/ivsat-africa.htm
   [16]: https://www.vodafone.com/what-we-do/services/m-pesa
-  [17]: https://en.wikipedia.org/wiki/MTN_Group
+  [17]: https://www.mtn.com
   [18]: https://www.un.org/africarenewal/web-features/addressing-foreign-direct-investment-paradox-africa
   [19]: https://www.un.org/africarenewal/web-features/why-infrastructure-development-africa-matters
   [20]: https://www.economist.com/special-report/2017/11/10/technology-cannot-solve-all-of-africas-problems-but-it-can-help-with-many
@@ -144,7 +144,7 @@ whilst asleep.
   [27]: https://www.accaglobal.com/my/en/member/member/accounting-business/2019/02/insights/cyber-attacks.html
   [28]: https://www.bullguard.com/Community/Security-Center/Mobile-Security/5-Mobile-Security-Practices-to-Use-Mobile-Money-Sa
   [29]: https://www.cepal.org/sites/default/files/events/files/day_2-session_5-security_privacy_concerns-kevin_butler.pdf
-  [30]: https://en.wikipedia.org/wiki/Village_banking
+  [30]: https://finca.org/our-work/microfinance/financial-services/village-banking/
   [31]: https://www.imf.org/external/pubs/ft/wp/2015/wp15102.pdf
   [32]: https://www.pri.org/stories/2015-11-24/south-africa-its-called-black-tax
-  [33]: https://en.wikipedia.org/wiki/Boiling_frog
+  [33]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC534568/
