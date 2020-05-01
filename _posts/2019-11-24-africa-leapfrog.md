@@ -4,7 +4,7 @@ title:  "Africa: Getting the basics right"
 author: richard
 tags: [africa, infrastructure, opportunities, challenges]
 categories: [Africa, Infrastructure, Opportunities, Challenges]
-featured: true
+featured: 
 description: "Africa is a diverse continent of opportunity and challenges. This article discusses some common themes across African states and businesses so that they stay competitive in the global landscape."
 image: assets/images/africa-leapfrog/sutirta-budiman.jpg
 ---
